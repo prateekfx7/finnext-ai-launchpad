@@ -1,6 +1,7 @@
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 function CTA() {
   return (
@@ -22,9 +23,14 @@ function CTA() {
             <Button className="gap-4" variant="outline">
               Schedule a Demo <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button className="gap-4">
-              Get Started Free <MoveRight className="w-4 h-4" />
-            </Button>
+            <ShimmerButton
+              className="gap-4 h-11 px-8 text-base"
+              background="hsl(var(--accent))"
+              shimmerColor="hsl(var(--accent-foreground))"
+            >
+              <span className="font-medium">Get Started Free</span>
+              <MoveRight className="w-4 h-4" />
+            </ShimmerButton>
           </div>
         </div>
       </div>

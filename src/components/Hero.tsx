@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -61,15 +61,17 @@ const Hero = () => {
 
       {/* CTA Button */}
       <div className="flex items-center gap-4 relative z-10 mb-16">
-        <Button
+        <ShimmerButton
           type="button"
-          variant="hero"
-          size="lg"
-          className="rounded-lg flex items-center justify-center"
+          className="text-base"
+          background="hsl(var(--accent))"
+          shimmerColor="hsl(var(--accent-foreground))"
           aria-label="Get started with FinNext AI"
         >
-          Start Free Trial
-        </Button>
+          <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight">
+            Start Free Trial
+          </span>
+        </ShimmerButton>
       </div>
 
       {/* Dashboard Preview with Glow Effect */}
