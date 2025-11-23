@@ -1,32 +1,63 @@
+import { cn } from "@/lib/utils";
+import { LogoCloud } from "@/components/ui/logo-cloud-4";
+
 const TrustedBy = () => {
-  const partners = [
-    { name: "Goldman Sachs", icon: "GS" },
-    { name: "J.P. Morgan", icon: "JPM" },
-    { name: "Morgan Stanley", icon: "MS" },
-    { name: "BlackRock", icon: "BR" },
-    { name: "Vanguard", icon: "VG" },
+  const logos = [
+    {
+      src: "https://svgl.app/library/nvidia-wordmark-light.svg",
+      alt: "Nvidia Logo",
+    },
+    {
+      src: "https://svgl.app/library/supabase_wordmark_light.svg",
+      alt: "Supabase Logo",
+    },
+    {
+      src: "https://svgl.app/library/openai_wordmark_light.svg",
+      alt: "OpenAI Logo",
+    },
+    {
+      src: "https://svgl.app/library/turso-wordmark-light.svg",
+      alt: "Turso Logo",
+    },
+    {
+      src: "https://svgl.app/library/vercel_wordmark.svg",
+      alt: "Vercel Logo",
+    },
+    {
+      src: "https://svgl.app/library/github_wordmark_light.svg",
+      alt: "GitHub Logo",
+    },
+    {
+      src: "https://svgl.app/library/claude-ai-wordmark-icon_light.svg",
+      alt: "Claude AI Logo",
+    },
+    {
+      src: "https://svgl.app/library/clerk-wordmark-light.svg",
+      alt: "Clerk Logo",
+    },
   ];
 
   return (
-    <section className="py-16 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-muted-foreground text-sm font-medium uppercase tracking-wider mb-8">
-          Trusted by Leading Investors & Fintech Partners
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="flex items-center justify-center group"
-            >
-              <div className="w-24 h-24 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-accent transition-all group-hover:shadow-lg">
-                <span className="text-2xl font-bold text-muted-foreground group-hover:text-accent transition-colors">
-                  {partner.icon}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="relative py-16">
+      <div
+        aria-hidden="true"
+        className={cn(
+          "-top-1/2 -translate-x-1/2 pointer-events-none absolute left-1/2 h-[120vmin] w-[120vmin] rounded-b-full",
+          "bg-[radial-gradient(ellipse_at_center,hsl(var(--foreground)/.1),transparent_50%)]",
+          "blur-[30px]"
+        )}
+      />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="mb-8 text-center">
+          <span className="block font-medium text-2xl text-muted-foreground">
+            Already used by
+          </span>
+          <span className="font-black text-2xl text-primary tracking-tight md:text-3xl">
+            Best in the Game
+          </span>
+        </h2>
+
+        <LogoCloud logos={logos} />
       </div>
     </section>
   );
