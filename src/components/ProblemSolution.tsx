@@ -1,4 +1,5 @@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ProblemSolution = () => {
   const problems = [
@@ -16,9 +17,22 @@ const ProblemSolution = () => {
   ];
 
   return (
-    <section id="solutions" className="py-24 bg-secondary/20">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="solutions"
+      className="py-24 bg-secondary/20"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             The Problem We{" "}
             <span className="bg-gradient-to-r from-accent to-success bg-clip-text text-transparent">
@@ -28,11 +42,17 @@ const ProblemSolution = () => {
           <p className="text-lg text-muted-foreground">
             Traditional investment platforms leave you drowning in data. We turn complexity into clarity.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Problems */}
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
             <div className="flex items-center space-x-3 mb-8">
               <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center">
                 <AlertCircle className="h-6 w-6 text-destructive" />
@@ -48,10 +68,16 @@ const ProblemSolution = () => {
                 <p className="text-muted-foreground">{problem}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Solutions */}
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
             <div className="flex items-center space-x-3 mb-8">
               <div className="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center">
                 <CheckCircle2 className="h-6 w-6 text-success" />
@@ -67,10 +93,10 @@ const ProblemSolution = () => {
                 <p className="text-foreground">{solution}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

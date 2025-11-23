@@ -21,6 +21,7 @@ import {
   BarChart3,
   Zap,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const IntegrationCard = () => (
   <Card className="flex h-full flex-col">
@@ -147,9 +148,22 @@ const ShortcutsCard = () => (
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-background">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="features"
+      className="py-24 bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Powerful Features for{" "}
             <span className="bg-gradient-to-r from-accent to-success bg-clip-text text-transparent">
@@ -159,18 +173,25 @@ const Features = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to make informed investment decisions, powered by artificial intelligence.
           </p>
-        </div>
+        </motion.div>
 
-        <BentoGridShowcase
-          integration={<IntegrationCard />}
-          trackers={<TrackersCard />}
-          statistic={<StatisticCard />}
-          focus={<FocusCard />}
-          productivity={<ProductivityCard />}
-          shortcuts={<ShortcutsCard />}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <BentoGridShowcase
+            integration={<IntegrationCard />}
+            trackers={<TrackersCard />}
+            statistic={<StatisticCard />}
+            focus={<FocusCard />}
+            productivity={<ProductivityCard />}
+            shortcuts={<ShortcutsCard />}
+          />
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
