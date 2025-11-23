@@ -6,8 +6,7 @@ const Hero = () => {
     <section
       className="relative min-h-screen flex flex-col items-center justify-start px-6 py-20 md:py-24 bg-background"
       style={{
-        animation: "fadeIn 0.6s ease-out",
-        fontFamily: "'Poppins', sans-serif"
+        animation: "fadeIn 0.6s ease-out"
       }}
     >
       <style>{`
