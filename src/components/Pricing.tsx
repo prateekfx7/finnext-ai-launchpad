@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
   const plans = [
@@ -53,9 +54,22 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-background">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      id="pricing"
+      className="py-24 bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Simple,{" "}
             <span className="bg-gradient-to-r from-accent to-success bg-clip-text text-transparent">
@@ -65,11 +79,18 @@ const Pricing = () => {
           <p className="text-lg text-muted-foreground">
             Start free and scale as you grow. All plans include a 14-day free trial.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <Card
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
+            >
+              <Card
               key={index}
               className={`relative ${
                 plan.popular
@@ -116,10 +137,11 @@ const Pricing = () => {
                 </Button>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
