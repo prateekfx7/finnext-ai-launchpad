@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
@@ -34,7 +35,13 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <Button variant="ghost">Sign In</Button>
-            <Button variant="hero">Get Started</Button>
+            <ShimmerButton
+              className="h-10 px-6 text-sm"
+              background="hsl(var(--accent))"
+              shimmerColor="hsl(var(--accent-foreground))"
+            >
+              <span className="font-medium">Get Started</span>
+            </ShimmerButton>
           </div>
 
           {/* Mobile menu button */}
@@ -82,9 +89,13 @@ const Navbar = () => {
               <Button variant="ghost" className="w-full">
                 Sign In
               </Button>
-              <Button variant="hero" className="w-full">
-                Get Started
-              </Button>
+              <ShimmerButton
+                className="w-full h-10 text-sm"
+                background="hsl(var(--accent))"
+                shimmerColor="hsl(var(--accent-foreground))"
+              >
+                <span className="font-medium">Get Started</span>
+              </ShimmerButton>
             </div>
           </div>
         </div>
