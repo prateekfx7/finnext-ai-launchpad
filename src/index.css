@@ -84,8 +84,8 @@ All colors MUST be HSL.
     --popover: 220 85% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 220 85% 12%;
+    --primary: 220 85% 12%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 220 70% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -128,5 +128,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-poppins;
+  }
+  
+  html {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  * {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 }
