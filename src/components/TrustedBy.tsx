@@ -4,36 +4,36 @@ import { LogoCloud } from "@/components/ui/logo-cloud-4";
 const TrustedBy = () => {
   const logos = [
     {
-      src: "https://svgl.app/library/nvidia-wordmark-light.svg",
-      alt: "Nvidia Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Goldman_Sachs.svg",
+      alt: "Goldman Sachs",
     },
     {
-      src: "https://svgl.app/library/supabase_wordmark_light.svg",
-      alt: "Supabase Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/4/49/BlackRock_wordmark.svg",
+      alt: "BlackRock",
     },
     {
-      src: "https://svgl.app/library/openai_wordmark_light.svg",
-      alt: "OpenAI Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Morgan_Stanley_Logo_1.svg",
+      alt: "Morgan Stanley",
     },
     {
-      src: "https://svgl.app/library/turso-wordmark-light.svg",
-      alt: "Turso Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/2/24/JPMorgan_Chase_logo.svg",
+      alt: "J.P. Morgan",
     },
     {
-      src: "https://svgl.app/library/vercel_wordmark.svg",
-      alt: "Vercel Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Vanguard.svg",
+      alt: "Vanguard",
     },
     {
-      src: "https://svgl.app/library/github_wordmark_light.svg",
-      alt: "GitHub Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+      alt: "Deloitte",
     },
     {
-      src: "https://svgl.app/library/claude-ai-wordmark-icon_light.svg",
-      alt: "Claude AI Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/5/5e/KPMG_logo.svg",
+      alt: "KPMG",
     },
     {
-      src: "https://svgl.app/library/clerk-wordmark-light.svg",
-      alt: "Clerk Logo",
+      src: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Bank_of_America_logo.svg",
+      alt: "Bank of America",
     },
   ];
 
@@ -50,10 +50,10 @@ const TrustedBy = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="mb-8 text-center">
           <span className="block font-medium text-2xl text-muted-foreground">
-            Already used by
+            Trusted by
           </span>
           <span className="font-black text-2xl text-primary tracking-tight md:text-3xl">
-            Best in the Game
+            Leading Financial Institutions
           </span>
         </h2>
 
