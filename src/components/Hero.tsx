@@ -34,7 +34,7 @@ const Hero = () => {
       duration: 0.6,
       delay: 0.2,
       ease: "easeOut"
-    }} className="text-4xl md:text-5xl lg:text-6xl font-medium text-center max-w-3xl px-6 leading-tight mb-6" style={{
+    }} className="text-4xl md:text-5xl lg:text-6xl font-medium text-center max-w-3xl px-8 md:px-12 leading-tight mb-6" style={{
       background: "linear-gradient(to bottom, hsl(var(--foreground)), hsl(var(--foreground)), hsl(var(--foreground) / 0.6))",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
