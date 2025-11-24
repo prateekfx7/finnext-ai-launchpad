@@ -3,7 +3,6 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,7 +13,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logo} alt="FinNext AI Logo" className="h-14 w-auto" />
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              FinNext AI
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
