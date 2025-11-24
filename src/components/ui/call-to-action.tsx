@@ -25,8 +25,8 @@ function CTA() {
             </Button>
             <ShimmerButton
               className="gap-4 h-11 px-8 text-base"
-              background="hsl(var(--accent))"
-              shimmerColor="hsl(var(--accent-foreground))"
+              background="hsl(var(--primary))"
+              shimmerColor="hsl(var(--primary-foreground))"
             >
               <span className="font-medium">Get Started Free</span>
               <MoveRight className="w-4 h-4" />
