@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logo} alt="FinNext AI Logo" className="h-10 w-auto" />
+            <img src={logo} alt="FinNext AI Logo" className="h-14 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
