@@ -19,12 +19,12 @@ function CTA() {
               Join thousands of investors who trust our AI-powered platform to make better investment decisions. Get personalized recommendations and real-time insights.
             </p>
           </div>
-          <div className="flex flex-row gap-4">
-            <Button className="gap-4" variant="outline">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <Button className="gap-2 sm:gap-4 h-10 sm:h-11 text-sm sm:text-base" variant="outline">
               Schedule a Demo <PhoneCall className="w-4 h-4" />
             </Button>
             <ShimmerButton
-              className="gap-4 h-11 px-8 text-base"
+              className="gap-2 sm:gap-4 h-10 sm:h-11 px-4 sm:px-8 text-sm sm:text-base"
               background="hsl(var(--primary))"
               shimmerColor="hsl(var(--primary-foreground))"
             >
