@@ -2,7 +2,9 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { FacebookIcon, TrendingUp, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
+import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 
 interface FooterLink {
 	title: string;
@@ -61,9 +63,10 @@ export function Footer() {
 
 			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
 				<AnimatedContainer className="space-y-4">
-					<TrendingUp className="size-8" />
+					<img src={logoDark} alt="Finnext" className="h-8 dark:hidden" />
+					<img src={logoLight} alt="Finnext" className="h-8 hidden dark:block" />
 					<p className="text-muted-foreground mt-8 text-sm md:mt-0">
-						© {new Date().getFullYear()} AI Investment Platform. All rights reserved.
+						© {new Date().getFullYear()} Finnext. All rights reserved.
 					</p>
 				</AnimatedContainer>
 
