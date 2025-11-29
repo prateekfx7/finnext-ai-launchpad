@@ -93,36 +93,16 @@ const Hero = () => {
       delay: 0.8,
       ease: "easeOut"
     }} className="w-full max-w-5xl relative pb-20">
-        <motion.div 
-          className="absolute left-1/2 w-[90%] pointer-events-none z-0" 
-          style={{
-            top: "-23%",
-            transform: "translateX(-50%)"
-          }} 
-          aria-hidden="true"
-          animate={{ 
-            scale: [1, 1.05, 1],
-            opacity: [0.7, 1, 0.7]
-          }}
-          transition={{ 
-            duration: 4, 
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
+        <div className="absolute left-1/2 w-[90%] pointer-events-none z-0" style={{
+        top: "-23%",
+        transform: "translateX(-50%)"
+      }} aria-hidden="true">
           <img src="https://i.postimg.cc/Ss6yShGy/glows.png" alt="" className="w-full h-auto" loading="eager" />
-        </motion.div>
+        </div>
         
-        <motion.div 
-          className="relative z-10"
-          whileHover={{ 
-            scale: 1.02,
-            y: -5
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <img alt="FinNext AI Dashboard preview showing investment analytics and portfolio metrics" className="w-full h-auto rounded-lg shadow-2xl hover:shadow-accent/20 transition-shadow duration-300" loading="eager" src="/lovable-uploads/f949520b-5454-4ed5-a888-240e406ae9a0.jpg" />
-        </motion.div>
+        <div className="relative z-10">
+          <img alt="FinNext AI Dashboard preview showing investment analytics and portfolio metrics" className="w-full h-auto rounded-lg shadow-2xl" loading="eager" src="/lovable-uploads/f949520b-5454-4ed5-a888-240e406ae9a0.jpg" />
+        </div>
       </motion.div>
     </section>;
 };

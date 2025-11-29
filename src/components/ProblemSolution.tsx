@@ -60,26 +60,13 @@ const ProblemSolution = () => {
               <h3 className="text-2xl font-bold text-foreground">Traditional Challenges</h3>
             </div>
             {problems.map((problem, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ 
-                  x: 5, 
-                  boxShadow: "0 5px 15px -3px hsl(var(--destructive) / 0.2)" 
-                }}
-                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-destructive/30 transition-all duration-300"
+                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-destructive/30 transition-colors"
               >
-                <motion.div
-                  animate={{ rotate: [0, -10, 10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: index * 0.2 }}
-                >
-                  <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
-                </motion.div>
+                <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
                 <p className="text-muted-foreground">{problem}</p>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
 
@@ -98,35 +85,13 @@ const ProblemSolution = () => {
               <h3 className="text-2xl font-bold text-foreground">Our AI-Powered Solutions</h3>
             </div>
             {solutions.map((solution, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ 
-                  x: -5, 
-                  scale: 1.02,
-                  boxShadow: "0 10px 25px -5px hsl(var(--success) / 0.3)" 
-                }}
-                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-success/30 transition-all duration-300"
+                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-success/30 transition-colors hover:shadow-lg"
               >
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 360]
-                  }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity,
-                    delay: index * 0.3,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
-                </motion.div>
+                <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                 <p className="text-foreground">{solution}</p>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </div>

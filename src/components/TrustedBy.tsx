@@ -45,18 +45,9 @@ const TrustedBy = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative py-16"
     >
-      <motion.div
+      <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[60vh] w-[60vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,hsl(var(--foreground)/.1),transparent_50%)] blur-[30px]"
-        animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.5, 0.7, 0.5]
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
       />
       <div className="container mx-auto max-w-3xl px-6">
         <motion.h2
@@ -66,21 +57,9 @@ const TrustedBy = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-5 text-center text-xl font-medium tracking-tight text-foreground md:text-3xl"
         >
-          <motion.span 
-            className="text-muted-foreground"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          >
-            Trusted by experts.
-          </motion.span>
+          <span className="text-muted-foreground">Trusted by experts.</span>
           <br />
-          <motion.span 
-            className="font-semibold"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          >
-            Used by the leaders.
-          </motion.span>
+          <span className="font-semibold">Used by the leaders.</span>
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
@@ -91,11 +70,10 @@ const TrustedBy = () => {
         />
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="[&_img]:transition-all [&_img]:duration-300 [&_img]:hover:scale-110 [&_img]:hover:brightness-125"
         >
           <LogoCloud logos={logos} />
         </motion.div>
