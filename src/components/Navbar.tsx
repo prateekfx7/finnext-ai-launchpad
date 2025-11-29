@@ -82,6 +82,16 @@ const Navbar = () => {
             >
               Pricing
             </a>
+            <div className="pt-4 flex justify-center">
+              <Button
+                asChild
+                variant="outline"
+                className="w-4/5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <a href="#cta">Contact Us</a>
+              </Button>
+            </div>
             <div className="pt-4 space-y-2">
               <div className="flex justify-center pb-2">
                 <ThemeToggle />
