@@ -29,6 +29,9 @@ const Navbar = () => {
             <a href="#pricing" className="text-foreground hover:text-accent transition-colors font-medium">
               Pricing
             </a>
+            <a href="#cta" className="text-foreground hover:text-accent transition-colors font-medium">
+              Contact Us
+            </a>
           </div>
 
           {/* Desktop CTA */}
