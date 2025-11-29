@@ -96,14 +96,25 @@ const Pricing = () => {
                 plan.popular
                   ? "border-2 border-accent shadow-xl scale-105"
                   : "border-border"
-              } transition-all duration-300 hover:shadow-xl`}
+              } transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:-translate-y-2`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-accent to-success text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                <motion.div 
+                  className="absolute -top-4 left-1/2 -translate-x-1/2"
+                  animate={{ 
+                    y: [0, -3, 0],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{ 
+                    duration: 2, 
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <span className="bg-gradient-to-r from-accent to-success text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                     Most Popular
                   </span>
-                </div>
+                </motion.div>
               )}
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
@@ -130,7 +141,7 @@ const Pricing = () => {
                 </ul>
                 <Button
                   variant={plan.popular ? "hero" : "outline"}
-                  className="w-full"
+                  className="w-full transition-all duration-300 hover:scale-105 active:scale-95"
                   size="lg"
                 >
                   {plan.cta}
