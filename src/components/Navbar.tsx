@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
             <a href="#features" className="text-foreground hover:text-accent transition-colors font-medium">
               Features
             </a>
